@@ -1,0 +1,256 @@
+/* --- โครงสร้างหลัก (บังคับตัวอักษรสีเข้ม) --- */
+.app-container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937; /* บังคับตัวอักษรหลักเป็นสีเทาเข้มเกือบดำ */
+  background-color: #f3f4f6; /* พื้นหลังแอปสีเทาอ่อน */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้แอปดูลอยขึ้นมา */
+}
+
+h1 {
+  text-align: center;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  color: #374151;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+/* --- กล่องแต่ละสเต็ป --- */
+.section {
+  background: #ffffff; /* พื้นหลังกล่องสีขาวสะอาด */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- ปุ่มตัวเลือกทั่วไป --- */
+button {
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #1f2937; /* ตัวหนังสือปุ่มสีเข้ม */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* --- ปุ่มที่ถูกเลือก (Active) --- */
+button.active, .card.active {
+  background: #3b82f6; /* สีน้ำเงินสว่าง */
+  color: #ffffff; /* ตัวหนังสือสีขาวตัดกับพื้นน้ำเงินชัดเจน */
+  border-color: #2563eb;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* --- ปุ่มที่ติดเงื่อนไข 3 ครั้งล่าสุด (Locked) --- */
+button.locked {
+  background: #fee2e2; /* พื้นแดงอ่อนๆ */
+  color: #991b1b; /* ตัวหนังสือสีแดงเข้ม */
+  border-color: #fca5a5;
+  cursor: not-allowed;
+}
+
+/* --- การ์ดแสดงสารสามัญ --- */
+.card {
+  padding: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1f2937;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563; /* คำอธิบายสีเทาให้อ่านง่าย */
+}
+
+.card.active p {
+  color: #e0f2fe; /* ถ้าโดนเลือก คำอธิบายจะเปลี่ยนเป็นสีฟ้าอ่อนๆ จะได้อ่านออก */
+}
+
+/* --- กล่องยืนยันการบันทึก --- */
+.save-box {
+  margin-top: 24px;
+  padding: 20px;
+  background: #ecfdf5; /* พื้นเขียวอ่อน */
+  border-radius: 8px;
+  border: 1px solid #a7f3d0;
+  color: #065f46; /* ตัวหนังสือเขียวเข้ม */
+}
+
+.btn-save {
+  background: #10b981;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 16px;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-save:hover {
+  background: #059669;
+}
+
+/* --- หน้า Login / Register --- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* สีเทาอ่อน */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.auth-header h2 {
+  font-size: 1.8rem;
+  color: #111827;
+  border-bottom: none;
+  margin-bottom: 5px;
+}
+
+.auth-header p {
+  color: #6b7280;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.btn-auth {
+  background: #3b82f6;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.btn-auth:hover {
+  background: #2563eb;
+}
+
+.auth-toggle {
+  margin-top: 25px;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.auth-toggle span {
+  color: #3b82f6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-toggle span:hover {
+  text-decoration: underline;
+}
+
+/* --- Header ผู้ใช้ในแอปหลัก --- */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-flex h1 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.btn-logout:hover {
+  background: #fef2f2;
+}
