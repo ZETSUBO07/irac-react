@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const API_BASE_URL = 'https://irac-backend-xxxx.onrender.com/api';
+const API_BASE_URL = 'https://irac-backend.onrender.com/api';
 
 // ==========================================
 // 1. หน้าล็อกอิน และ สมัครสมาชิก (AuthScreen)
